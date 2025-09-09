@@ -1,0 +1,97 @@
+"use client"
+
+import {Box, Button, Text, Container, SimpleGrid, Spacer, NumberInput, HStack, Badge, Heading,} from "@chakra-ui/react"
+import { DecorativeBox } from "@/components/DecorativeBox"
+import { useMealsStore } from "@/store/useMealsStore"
+import { LuStore, LuMapPin } from "react-icons/lu"
+import { useState } from "react"
+
+export default function MealsDisplay() {
+    const meals = useMealsStore((state) => state.meals)
+    const addToCart = useMealsStore((state) => state.addToCart)
+
+    return (
+        <Container>
+            <Heading as="h1" fontSize="4xl" mb={8}>Produkte</Heading>
+            <SimpleGrid columns={4} gap={8} width="100%">
+                {meals.map((meal) => {
+                    const [count, setCount] = useState(meal.count !== 0 ? 1 : 0)
+
+                    return (
+                        <Box
+                            key={meal.name}
+                            maxW="sm"
+                            borderWidth="1px"
+                            borderRadius="lg"
+                            overflow="hidden"
+                            display="flex"
+                            flexDirection="column"
+                            position="relative"
+                        >
+                            { meal.count === 0 &&
+                                <Badge colorPalette="red" position="absolute" top={2} right={2} fontSize="xs">
+                                    Artikel ausverkauft
+                                </Badge>
+                            }
+
+                            <DecorativeBox
+                                width="100%"
+                                height="200px"
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                            >
+                                {meal.name} Bild
+                            </DecorativeBox>
+
+                            <Box p="4">
+                                <Text fontWeight="bold" fontSize="lg">
+                                    {meal.name}
+                                </Text>
+                                <Text fontSize="sm" color="gray.500" display="flex" alignItems="center" gap={2}>
+                                    <LuStore />
+                                    {meal.store}
+                                </Text>
+                                <Text fontSize="sm" color="gray.500" display="flex" alignItems="center" gap={2}>
+                                    <LuMapPin />
+                                    {meal.location}
+                                </Text>
+                                <Text fontWeight="medium" fontSize="xl" mt="2">
+                                    {meal.price} CHF
+                                </Text>
+                            </Box>
+
+                            <Spacer />
+
+                            <HStack p="4" gap={3}>
+                                <NumberInput.Root
+                                    value={count}
+                                    min={meal.count !== 0 ? 1 : 0}
+                                    max={meal.count}
+                                    disabled={meal.count === 0}
+                                    onValueChange={(e) => setCount(e.valueAsNumber)}
+                                >
+                                    <NumberInput.Control>
+                                        <NumberInput.IncrementTrigger />
+                                        <NumberInput.DecrementTrigger />
+                                    </NumberInput.Control>
+                                    <NumberInput.Input />
+                                    <NumberInput.Scrubber />
+                                </NumberInput.Root>
+
+                                <Button
+                                    variant="solid"
+                                    colorScheme="green"
+                                    disabled={meal.count === 0}
+                                    onClick={() => addToCart(meal, count)}
+                                >
+                                    In den Warenkorb
+                                </Button>
+                            </HStack>
+                        </Box>
+                    )
+                })}
+            </SimpleGrid>
+        </Container>
+    )
+}
