@@ -6,8 +6,8 @@ export function Footer() {
         <Box as="footer" mt={24} py={16}>
             <Container maxW="container.xl">
                 <Box mt={16} borderTop="1px solid #e2e8f0" pt={6}>
-                    <Text textAlign="center" color="gray.500">
-                        © {new Date().getFullYear()} Zmitt AG. Alle Rechte vorbehalten.
+                    <Text textAlign="center" color="gray.300">
+                        © {new Date().getFullYear()} Zmitt AG - Alle Rechte vorbehalten.
                     </Text>
                 </Box>
             </Container>

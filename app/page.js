@@ -21,11 +21,11 @@ export default function Home() {
                 <HStack gap={100}>
                     <VStack spacing={2} align={"left"} width={"100%"}>
                         <HStack>
-                            <LuPizza color={"#3364c8"}/>
-                            <Text color={"#3364c8"}>Home</Text>
+                            <LuPizza color={"#a0bfff"}/>
+                            <Text color={"#a0bfff"}>Home</Text>
                         </HStack>
                         <Heading as="h1" size="6xl">Gerichte schnell und frisch bestellen</Heading>
-                        <Text textStyle="xl" color={"gray.500"}>
+                        <Text textStyle="xl" color={"gray.300"}>
                             Mit unseren Autmaten bestellen sie Gerichte von lokalen Restaurants und holen sie kurz später ab.
                         </Text>
                         <Box pt={5}>
@@ -43,12 +43,12 @@ export default function Home() {
             <Container mb={32}>
                 <VStack mb={8} align={"left"} width={"100%"}>
                     <HStack>
-                        <LuPizza color={"#3364c8"}/>
-                        <Text color={"#3364c8"}>Was wir uns überlegt haben</Text>
+                        <LuPizza color={"#a0bfff"}/>
+                        <Text color={"#a0bfff"}>Was wir uns überlegt haben</Text>
                     </HStack>
                     <Heading as="h1" size="4xl">Das Konzep</Heading>
                 </VStack>
-                <Text textStyle="xl" color={"gray.500"} width={"80%"}>
+                <Text textStyle="xl" color={"gray.300"} width={"80%"}>
                     Mit unseren Essensautomaten holen Sie sich leckere Gerichte von lokalen Restaurants genau dann, wann
                     es Ihnen passt. Einfach online bestellen, am Automaten abholen und frisch geniessen. Das ganze ist schnell, bequem
                     und rund um die Uhr. Unsere Automaten stehen an zentralen Orten in Baden und machen es einfach,
@@ -60,8 +60,8 @@ export default function Home() {
             <Container mb={32}>
                 <VStack mb={8} align={"left"} width={"100%"}>
                     <HStack>
-                        <LuUsersRound color={"#3364c8"}/>
-                        <Text color={"#3364c8"}>Mit wem wir zusammenarbeiten</Text>
+                        <LuUsersRound color={"#a0bfff"}/>
+                        <Text color={"#a0bfff"}>Mit wem wir zusammenarbeiten</Text>
                     </HStack>
                     <Heading as="h1" size="4xl">Unsere Partner</Heading>
                 </VStack>
@@ -131,8 +131,8 @@ export default function Home() {
             <Container>
                 <VStack mb={8} align={"left"} width={"100%"}>
                     <HStack>
-                        <LuMapPin color={"#3364c8"}/>
-                        <Text color={"#3364c8"}>Wo wir uns befinden</Text>
+                        <LuMapPin color={"#a0bfff"}/>
+                        <Text color={"#a0bfff"}>Wo wir uns befinden</Text>
                     </HStack>
                     <Heading as="h1" size="4xl">Unsere Standorte</Heading>
                 </VStack>
@@ -144,6 +144,7 @@ export default function Home() {
                             allowFullScreen=""
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
+                            title="Position Bahnhof"
                         />
                     </AspectRatio>
                     <AspectRatio ratio={3 / 2} width="100%">
@@ -153,6 +154,7 @@ export default function Home() {
                             allowFullScreen=""
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
+                            title="Position Schulhaus"
                         />
                     </AspectRatio>
                 </HStack>
