@@ -126,7 +126,7 @@ export default function Warenkorb() {
                             Du hast Artikel von mehreren Automaten im Warenkorb
                         </Badge>
                     ):(
-                        cart.length === 0? <Text>Keine Artikel im Warenkorb </Text> : <Text>Abholung beim Automaten: {cart[0].location} ab 12 Uhr </Text>
+                        cart.length === 0? <Text>Ihr Warenkorb ist leer. </Text> : <Text>Abholung beim Automaten {cart[0].location} ab 12 Uhr </Text>
                     )
                     }
                 </Box>
