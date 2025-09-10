@@ -6,9 +6,15 @@ const inter = Inter({
     display: "swap",
 })
 
+export const metadata = {
+    title: "ZMitt AG",
+    description: "Bestellen und frisch geniessen.",
+}
+
+
 export default function RootLayout({children}) {
     return (
-        <html className={inter.className} suppressHydrationWarning>
+        <html lang="de" className={inter.className} suppressHydrationWarning>
         <body>
             <Provider>{children}</Provider>
         </body>
