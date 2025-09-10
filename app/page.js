@@ -21,8 +21,8 @@ export default function Home() {
                 <HStack gap={100}>
                     <VStack spacing={2} align={"left"} width={"100%"}>
                         <HStack>
-                            <LuPizza color={"#9bbcff"}/>
-                            <Text color={"#9bbcff"}>Home</Text>
+                            <LuPizza color={"#3364c8"}/>
+                            <Text color={"#3364c8"}>Home</Text>
                         </HStack>
                         <Heading as="h1" size="6xl">Gerichte schnell und frisch bestellen</Heading>
                         <Text textStyle="xl" color={"gray.500"}>
@@ -43,8 +43,8 @@ export default function Home() {
             <Container mb={32}>
                 <VStack mb={8} align={"left"} width={"100%"}>
                     <HStack>
-                        <LuPizza color={"#9bbcff"}/>
-                        <Text color={"#9bbcff"}>Was wir uns überlegt haben</Text>
+                        <LuPizza color={"#3364c8"}/>
+                        <Text color={"#3364c8"}>Was wir uns überlegt haben</Text>
                     </HStack>
                     <Heading as="h1" size="4xl">Das Konzep</Heading>
                 </VStack>
@@ -60,15 +60,15 @@ export default function Home() {
             <Container mb={32}>
                 <VStack mb={8} align={"left"} width={"100%"}>
                     <HStack>
-                        <LuUsersRound color={"#9bbcff"}/>
-                        <Text color={"#9bbcff"}>Mit wem wir zusammenarbeiten</Text>
+                        <LuUsersRound color={"#3364c8"}/>
+                        <Text color={"#3364c8"}>Mit wem wir zusammenarbeiten</Text>
                     </HStack>
                     <Heading as="h1" size="4xl">Unsere Partner</Heading>
                 </VStack>
                 <VStack align={"left"} width={"100%"} mb={8}>
                     <HStack mb={4}>
-                        <LuMapPin size={24} color={"#36e19e"}/>
-                        <Heading as="h1" size="xl" color={"#36e19e"}>Bahnhof</Heading>
+                        <LuMapPin size={24} color={"#2dd593"}/>
+                        <Heading as="h1" size="xl" color={"#2dd593"}>Bahnhof</Heading>
                     </HStack>
                     <HStack gap={8}>
                         <AspectRatio ratio={2} width="200px">
@@ -100,8 +100,8 @@ export default function Home() {
                 </VStack>
                 <VStack align={"left"} width={"100%"}>
                     <HStack mb={4}>
-                        <LuMapPin size={24} color={"#36e19e"}/>
-                        <Heading as="h1" size="xl" color={"#36e19e"}>Berufsschule</Heading>
+                        <LuMapPin size={24} color={"#2dd593"}/>
+                        <Heading as="h1" size="xl" color={"#2dd593"}>Berufsschule</Heading>
                     </HStack>
                     <HStack gap={8}>
                         <AspectRatio ratio={2} width="200px">
@@ -131,8 +131,8 @@ export default function Home() {
             <Container>
                 <VStack mb={8} align={"left"} width={"100%"}>
                     <HStack>
-                        <LuMapPin color={"#9bbcff"}/>
-                        <Text color={"#9bbcff"}>Wo wir uns befinden</Text>
+                        <LuMapPin color={"#3364c8"}/>
+                        <Text color={"#3364c8"}>Wo wir uns befinden</Text>
                     </HStack>
                     <Heading as="h1" size="4xl">Unsere Standorte</Heading>
                 </VStack>
