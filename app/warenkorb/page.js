@@ -69,7 +69,7 @@ export default function Warenkorb() {
                 </Box>
 
                 <Box p={4} borderWidth="1px" borderRadius="md">
-                    <Heading size="xl" mb={4}>Kundendaten</Heading>
+                    <Heading size="xl" mb={4}>Persönliche Daten</Heading>
                     <Fieldset.Root size="lg" maxW="md">
                         <Fieldset.Content>
                             <Field.Root>
