@@ -9,6 +9,7 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import {LuTrash} from "react-icons/lu";
 
+
 export default function Warenkorb() {
     const router = useRouter()
 
@@ -23,6 +24,22 @@ export default function Warenkorb() {
     const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0)
     const isSingleLocation = cart.length === 0 || cart.every(item => item.location === cart[0].location);
 
+    const getNextHour = () => {
+        const now = new Date();
+        let hour = now.getHours();
+
+        if (now.getMinutes() < 30) {
+            hour += 1;
+        } else {
+            hour += 2;
+        }
+
+        hour = hour % 24;
+
+        return hour;
+    }
+
+    const nextHour = getNextHour();
 
     const handleCheckout = () => {
         clearCart()
@@ -126,7 +143,7 @@ export default function Warenkorb() {
                             Du hast Artikel von mehreren Automaten im Warenkorb
                         </Badge>
                     ):(
-                        cart.length === 0? <Text>Ihr Warenkorb ist leer. </Text> : <Text>Abholung beim Automaten {cart[0].location} ab 12 Uhr </Text>
+                        cart.length === 0? <Text>Ihr Warenkorb ist leer. </Text> : <Text>Abholung beim Automaten {cart[0].location} ab {nextHour} Uhr </Text>
                     )
                     }
                 </Box>
