@@ -5,6 +5,18 @@ import {useState} from "react";
 
 export default function MealCard({ meal, addToCart }) {
     const [count, setCount] = useState(meal.count !== 0 ? 1 : 0)
+    const [loading, setLoading] = useState(false);
+
+    const sleep = (ms) => {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    const onclick = async () => {
+        setLoading(true);
+        addToCart(meal, count)
+        await sleep(500);
+        setLoading(false);
+    }
 
     return (
         <Box
@@ -72,7 +84,8 @@ export default function MealCard({ meal, addToCart }) {
                     variant="solid"
                     colorScheme="green"
                     disabled={meal.count === 0}
-                    onClick={() => addToCart(meal, count)}
+                    onClick={onclick}
+                    loading={loading}
                 >
                     In den Warenkorb
                 </Button>
